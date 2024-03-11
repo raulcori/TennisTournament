@@ -48,13 +48,13 @@ Front controller. Se creó un archivo ``.htaccess`` en la raíz para modificar l
 	
 Se realizaron algunos test unitarios.
  
-Conexión a 1 base de datos (MySQL/MariaDB). Pero switcheable a otras formas de persistencia desde el archivo .env
+Conexión a 1 base de datos (MySQL/MariaDB). Pero switcheable a otras formas de persistencia desde el archivo ``.env``
 	
-Control de los metodos HTTP y urls. No se controla ni valida el cliente.
+Control de los métodos HTTP y urls. No se controla ni valida el cliente.
 	
-Lo realizado considero personalmente suficiente como demostracion aunque se pudieron mejorar e incluir varias cosas más.
+Lo realizado considero personalmente suficiente como demostración aunque se pudieron mejorar e incluir varias cosas más.
 	
-	
+
 ## Algunas mejoras
 * Agregar middlewares para: Validar clientes y tokens, Loggear de request y responses.
 * Usar caches
@@ -64,7 +64,7 @@ Lo realizado considero personalmente suficiente como demostracion aunque se pudi
 	
 
 ## Arquitectura: 
-Hexagonal ordenada en primer nivel por entidad, nombre de la capa en segundo nivel.	
+Arquitectura hexagonal ordenada en primer nivel por entidad y por nombre de la capa en segundo nivel.	
 
 ```
 ├── game/
@@ -85,7 +85,7 @@ Hexagonal ordenada en primer nivel por entidad, nombre de la capa en segundo niv
     └── infrastructure/
 ```
 
-En la carpeta util se puso tanto los utilitarios como la lógica compartida por las entidades.
+En la carpeta ``util`` se puso tanto los utilitarios como la lógica compartida por las entidades.
 	
 ## Conocimiento funcional: El caso más relevante es el de ``jugar torneo``.
 1. Se reciven y validan los datos del torneo y sus jugadores.
@@ -102,7 +102,8 @@ En la carpeta util se puso tanto los utilitarios como la lógica compartida por 
 3. Performance: ``$OriginalPerformance * (1 + $luckFactor->value() * ($random - 0.5) / 100);``
 
 ``$luckFactor`` puede valor entre 0 y 100
-``$random`` es un numero flotante en el intervalo [0;1)
+
+``$random`` es un número flotante en el intervalo [0;1)
 	
 ### OriginalPerformance:
 * Hombres: ``$performance = $player->level->value() * $player->force * $player->displacementSpeed;``
