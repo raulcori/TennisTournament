@@ -1,0 +1,15 @@
+{
+    "name": "raulcori/tennis-tournament",
+    "description": "Simple tennis tournament simulator",
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
